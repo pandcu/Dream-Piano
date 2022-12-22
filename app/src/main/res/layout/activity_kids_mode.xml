@@ -7,5 +7,80 @@
     android:background="@drawable/kidmode_bg">
 
 
+    <VideoView
+        android:id="@+id/kid_mode_video"
+        android:layout_width="750dp"
+        android:layout_height="130dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <RelativeLayout
+        android:id="@+id/layout_kidmod"
+        android:layout_width="1920dp"
+        android:layout_height="425dp"
+        android:layout_below="@+id/kid_mode_video"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/kid_mode_do"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="108dp"
+            android:layout_height="425dp"
+            android:background="@drawable/kid_mode_do">
+        </Button>
+
+        <Button
+            android:id="@+id/kid_mode_re"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="108dp"
+            android:layout_height="425dp"
+            android:layout_toEndOf="@id/kid_mode_do"
+            android:background="@drawable/kid_mode_re">
+        </Button>
+
+        <Button
+            android:id="@+id/kid_mode_mi"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="108dp"
+            android:layout_height="425dp"
+            android:layout_toEndOf="@id/kid_mode_re"
+            android:background="@drawable/kid_mode_mi">
+        </Button>
+
+        <Button
+            android:id="@+id/kid_mode_fa"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="108dp"
+            android:layout_height="425dp"
+            android:layout_toEndOf="@id/kid_mode_mi"
+            android:background="@drawable/kid_mode_fa">
+        </Button>
+
+        <Button
+            android:id="@+id/kid_mode_so"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="108dp"
+            android:layout_height="425dp"
+            android:layout_marginStart="1dp"
+            android:layout_toEndOf="@id/kid_mode_fa"
+            android:background="@drawable/kid_mode_so"></Button>
+
+        <Button
+            android:id="@+id/kid_mode_la"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="108dp"
+            android:layout_height="425dp"
+            android:layout_toEndOf="@id/kid_mode_so"
+            android:background="@drawable/kid_mode_la">
+        </Button>
+        <Button
+            android:id="@+id/kid_mode_si"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="108dp"
+            android:layout_height="425dp"
+            android:layout_toEndOf="@id/kid_mode_la"
+            android:background="@drawable/kid_mode_si">
+        </Button>
+    </RelativeLayout>
 
 </RelativeLayout>

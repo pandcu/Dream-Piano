@@ -10,12 +10,15 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
     Button freeplaybtn;
     Button kidmodebtn;
+    Button classicmodebtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         freeplaybtn=(Button) findViewById(R.id.freeplay);
         kidmodebtn=(Button)findViewById(R.id.childmode);
+        classicmodebtn=(Button)findViewById(R.id.classicmode);
+
 
         freeplaybtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,5 +36,17 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        classicmodebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent();
+                intent.setClass(MainActivity.this,ClassicModeActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
+
+
 }

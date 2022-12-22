@@ -24,7 +24,7 @@
         android:text="儿童启蒙模式" />
 
     <Button
-        android:id="@+id/popularmode"
+        android:id="@+id/classicmode"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_below="@id/childmode"
@@ -35,7 +35,7 @@
         android:id="@+id/freeplay"
         android:layout_width="150dp"
         android:layout_height="50dp"
-        android:layout_below="@id/popularmode"
+        android:layout_below="@id/classicmode"
         android:layout_centerHorizontal="true"
         android:text="自由演奏模式" />
 </RelativeLayout>

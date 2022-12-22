@@ -5,51 +5,25 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <RadioGroup
-        android:id="@+id/timbre_type"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <RadioButton
-            android:id="@+id/timbre_piano"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="钢琴">
-        </RadioButton>
+    <VideoView
+        android:id="@+id/classic_mode_video"
+        android:layout_width="850dp"
+        android:layout_height="130dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
 
-        <RadioButton
-            android:id="@+id/timbre_Kalimbaqin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="卡林巴琴">
-
-        </RadioButton>
-        <RadioButton
-            android:id="@+id/timbre_trumpet"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="小号">
-        </RadioButton>
-
-    </RadioGroup>
-
-    <Button
-        android:id="@+id/free_play_title"
-        android:layout_width="1920dp"
-        android:layout_height="100dp"
-        android:layout_below="@+id/timbre_type"
-        android:background="@drawable/title_bg" />
+    </VideoView>
 
     <RelativeLayout
         android:id="@+id/layout_white"
         android:layout_width="1920dp"
         android:layout_height="280dp"
-        android:layout_below="@+id/free_play_title"
         android:backgroundTint="@color/white"
+        android:layout_below="@+id/classic_mode_video"
         android:orientation='vertical'>
 
         <Button
-            android:id="@+id/b1"
+            android:id="@+id/classic_mode_b1"
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="59dp"
             android:layout_height="300dp"
@@ -57,101 +31,101 @@
             android:background="@drawable/p_bg"></Button>
 
         <Button
-            android:id="@+id/b2"
+            android:id="@+id/classic_mode_b2"
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="59.1dp"
             android:layout_height="300dp"
             android:layout_alignParentTop="true"
-            android:layout_toEndOf="@+id/b1"
+            android:layout_toEndOf="@+id/classic_mode_b1"
             android:background="@drawable/p_bg"></Button>
         <Button
-            android:id="@+id/b3"
+            android:id="@+id/classic_mode_b3"
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="59.1dp"
             android:layout_height="300dp"
             android:layout_alignParentTop="true"
-            android:layout_toEndOf="@+id/b2"
+            android:layout_toEndOf="@+id/classic_mode_b2"
             android:background="@drawable/p_bg"></Button>
 
         <Button
-            android:id="@+id/b4"
+            android:id="@+id/classic_mode_b4"
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="59.1dp"
             android:layout_height="300dp"
             android:layout_alignParentTop="true"
-            android:layout_toEndOf="@+id/b3"
+            android:layout_toEndOf="@+id/classic_mode_b3"
             android:background="@drawable/p_bg"></Button>
         <Button
-            android:id="@+id/b5"
+            android:id="@+id/classic_mode_b5"
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="59.1dp"
             android:layout_height="300dp"
             android:layout_alignParentTop="true"
-            android:layout_toEndOf="@+id/b4"
+            android:layout_toEndOf="@+id/classic_mode_b4"
             android:background="@drawable/p_bg"></Button>
         <Button
-            android:id="@+id/b6"
+            android:id="@+id/classic_mode_b6"
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="59.1dp"
             android:layout_height="300dp"
             android:layout_alignParentTop="true"
-            android:layout_toEndOf="@id/b5"
+            android:layout_toEndOf="@id/classic_mode_b5"
             android:background="@drawable/p_bg"></Button>
         <Button
-            android:id="@+id/b7"
+            android:id="@+id/classic_mode_b7"
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="59.1dp"
             android:layout_height="300dp"
             android:layout_alignParentTop="true"
-            android:layout_toEndOf="@+id/b6"
+            android:layout_toEndOf="@+id/classic_mode_b6"
             android:background="@drawable/p_bg"></Button>
         <Button
-            android:id="@+id/b8"
+            android:id="@+id/classic_mode_b8"
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="59.1dp"
             android:layout_height="300dp"
             android:layout_alignParentTop="true"
-            android:layout_toEndOf="@+id/b7"
+            android:layout_toEndOf="@+id/classic_mode_b7"
             android:background="@drawable/p_bg"></Button>
         <Button
-            android:id="@+id/b9"
+            android:id="@+id/classic_mode_b9"
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="59.1dp"
             android:layout_height="300dp"
             android:layout_alignParentTop="true"
-            android:layout_toEndOf="@+id/b8"
+            android:layout_toEndOf="@+id/classic_mode_b8"
             android:background="@drawable/p_bg"></Button>
         <Button
-            android:id="@+id/b10"
+            android:id="@+id/classic_mode_b10"
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="59.1dp"
             android:layout_height="300dp"
             android:layout_alignParentTop="true"
-            android:layout_toEndOf="@id/b9"
+            android:layout_toEndOf="@id/classic_mode_b9"
             android:background="@drawable/p_bg"></Button>
         <Button
-            android:id="@+id/b11"
+            android:id="@+id/classic_mode_b11"
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="59.1dp"
             android:layout_height="300dp"
             android:layout_alignParentTop="true"
-            android:layout_toEndOf="@+id/b10"
+            android:layout_toEndOf="@+id/classic_mode_b10"
             android:background="@drawable/p_bg"></Button>
         <Button
-            android:id="@+id/b12"
+            android:id="@+id/classic_mode_b12"
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="59.1dp"
             android:layout_height="300dp"
             android:layout_alignParentTop="true"
-            android:layout_toEndOf="@+id/b11"
+            android:layout_toEndOf="@+id/classic_mode_b11"
             android:background="@drawable/p_bg"></Button>
         <Button
-            android:id="@+id/b13"
+            android:id="@+id/classic_mode_b13"
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="59.1dp"
             android:layout_height="300dp"
             android:layout_alignParentTop="true"
-            android:layout_toEndOf="@+id/b12"
+            android:layout_toEndOf="@+id/classic_mode_b12"
             android:background="@drawable/p_bg"></Button>
 
         <LinearLayout
@@ -161,61 +135,61 @@
             android:layout_alignParentTop="true">
 
             <Button
-                android:id="@+id/hb1"
+                android:id="@+id/classic_mode_hb1"
                 android:layout_width="38dp"
                 android:layout_height="160dp"
                 android:layout_marginStart="40dp"
                 android:background="@drawable/hb_bg"></Button>
 
             <Button
-                android:id="@+id/hb2"
+                android:id="@+id/classic_mode_hb2"
                 android:layout_width="38dp"
                 android:layout_height="160dp"
                 android:layout_marginStart="80dp"
                 android:background="@drawable/hb_bg"></Button>
 
             <Button
-                android:id="@+id/hb3"
+                android:id="@+id/classic_mode_hb3"
                 android:layout_width="38dp"
                 android:layout_height="160dp"
                 android:layout_marginStart="22dp"
                 android:background="@drawable/hb_bg"></Button>
 
             <Button
-                android:id="@+id/hb4"
+                android:id="@+id/classic_mode_hb4"
                 android:layout_width="38dp"
                 android:layout_height="160dp"
                 android:layout_marginStart="80dp"
                 android:background="@drawable/hb_bg"></Button>
 
             <Button
-                android:id="@+id/hb5"
+                android:id="@+id/classic_mode_hb5"
                 android:layout_width="38dp"
                 android:layout_height="160dp"
                 android:layout_marginStart="22dp"
                 android:background="@drawable/hb_bg" />
 
             <Button
-                android:id="@+id/hb6"
+                android:id="@+id/classic_mode_hb6"
                 android:layout_width="38dp"
                 android:layout_height="160dp"
                 android:layout_marginStart="22dp"
                 android:background="@drawable/hb_bg" />
 
             <Button
-                android:id="@+id/hb7"
+                android:id="@+id/classic_mode_hb7"
                 android:layout_width="38dp"
                 android:layout_height="160dp"
                 android:layout_marginStart="80dp"
                 android:background="@drawable/hb_bg" />
 
             <Button
-                android:id="@+id/hb8"
+                android:id="@+id/classic_mode_hb8"
                 android:layout_width="38dp"
                 android:layout_height="160dp"
                 android:layout_marginStart="22dp"
                 android:background="@drawable/hb_bg" />
         </LinearLayout>
-    </RelativeLayout>
 
+    </RelativeLayout>
 </RelativeLayout>
