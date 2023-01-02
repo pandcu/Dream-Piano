@@ -7,7 +7,6 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
-
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -18,6 +17,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DREAM_PIANO"
         tools:targetApi="31">
+        <activity
+            android:name=".ClassicListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GameActivity"
+            android:exported="false" />
+        <activity
+            android:name=".KidListActivity"
+            android:exported="false" />
         <activity
             android:name=".ClassicModeActivity"
             android:exported="false" />

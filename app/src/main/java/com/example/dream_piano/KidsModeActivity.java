@@ -3,7 +3,6 @@ package com.example.dream_piano;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.ComponentName;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.media.AudioManager;
@@ -37,7 +36,11 @@ public class KidsModeActivity extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kids_mode);
-        videoView = (VideoView)this.findViewById(R.id.kid_mode_video );
+
+//        Intent i = getIntent();
+//        Bundle b = i.getBundleExtra("date");
+//
+//       videoView.setText(String.format("name = %s,age = %d, name1 = %s",b.getString("name"),b.getInt("age"),b.getString("name1","不存在")));
 
         play_mp4();
 
@@ -109,34 +112,39 @@ public class KidsModeActivity extends AppCompatActivity {
         });
 
     }
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-       getMenuInflater().inflate(R.menu.kid_mode_menu,menu);
-        return  super.onCreateOptionsMenu(menu);
-    }
-
-    public  boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (item.isCheckable()) {
-            item.setChecked(true);
-        }
-        String videoUrl="android.resource://" + getPackageName() + "/" + R.raw.littlestar;
-        Uri uri;
-        switch (item.getItemId()){
-            case R.id.Two_tigers:
-                videoUrl= "android.resource://" + getPackageName() + "/" + R.raw.painter;
-                break;
-            case R.id.Little_stars:
-                videoUrl= "android.resource://" + getPackageName() + "/" + R.raw.littlestar;
-                break;
-        }
-        videoView.setMediaController(new MediaController(this));
-        uri = Uri.parse( videoUrl);
-        videoView.setVideoURI(uri);
-        videoView.start();
-        return true;
-    }
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//       getMenuInflater().inflate(R.menu.kid_mode_menu,menu);
+//        return  super.onCreateOptionsMenu(menu);
+//    }
+//
+//    public  boolean onOptionsItemSelected(@NonNull MenuItem item) {
+//        if (item.isCheckable()) {
+//            item.setChecked(true);
+//        }
+//        String videoUrl="android.resource://" + getPackageName() + "/" + R.raw.littlestar;
+//        Uri uri;
+//        switch (item.getItemId()){
+//            case R.id.Two_tigers:
+//                videoUrl= "android.resource://" + getPackageName() + "/" + R.raw.painter;
+//                break;
+//            case R.id.Little_stars:
+//                videoUrl= "android.resource://" + getPackageName() + "/" + R.raw.littlestar;
+//                break;
+//        }
+//        videoView.setMediaController(new MediaController(this));
+//        uri = Uri.parse( videoUrl);
+//        videoView.setVideoURI(uri);
+//        videoView.start();
+//        return true;
+//    }
     private void play_mp4(){
-        String videoUrl1 = "android.resource://" + getPackageName() + "/" + R.raw.littlestar;
+        videoView = (VideoView) this.findViewById(R.id.kid_mode_video);
+        String videoUrl1="android.resource://" + getPackageName() + "/" +R.raw.littlestar;
+        if ("粉刷匠".equals(getIntent().getStringExtra("date"))){
+            videoUrl1="android.resource://" + getPackageName() + "/" +R.raw.painter;
+        }
+
         Uri uri = Uri.parse( videoUrl1 );
         videoView.setMediaController(new MediaController(this));
         videoView.setVideoURI(uri);

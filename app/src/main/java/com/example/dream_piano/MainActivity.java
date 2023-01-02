@@ -11,6 +11,7 @@ public class MainActivity extends AppCompatActivity {
     Button freeplaybtn;
     Button kidmodebtn;
     Button classicmodebtn;
+    Button gamebtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
         freeplaybtn=(Button) findViewById(R.id.freeplay);
         kidmodebtn=(Button)findViewById(R.id.childmode);
         classicmodebtn=(Button)findViewById(R.id.classicmode);
+        gamebtn=(Button)findViewById(R.id.game);
 
 
         freeplaybtn.setOnClickListener(new View.OnClickListener() {
@@ -32,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent();
-                intent.setClass(MainActivity.this,KidsModeActivity.class);
+                intent.setClass(MainActivity.this, KidListActivity.class);
                 startActivity(intent);
             }
         });
@@ -41,7 +43,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent();
-                intent.setClass(MainActivity.this,ClassicModeActivity.class);
+                intent.setClass(MainActivity.this,ClassicListActivity.class);
+                startActivity(intent);
+            }
+        });
+        gamebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent();
+                intent.setClass(MainActivity.this,GameActivity.class);
                 startActivity(intent);
             }
         });

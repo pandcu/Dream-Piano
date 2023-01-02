@@ -38,4 +38,11 @@
         android:layout_below="@id/classicmode"
         android:layout_centerHorizontal="true"
         android:text="自由演奏模式" />
+    <Button
+        android:id="@+id/game"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/freeplay"
+        android:layout_centerHorizontal="true"
+        android:text="小游戏" />
 </RelativeLayout>

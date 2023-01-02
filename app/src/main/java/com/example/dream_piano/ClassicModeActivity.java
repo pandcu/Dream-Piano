@@ -5,12 +5,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.pm.ActivityInfo;
 import android.media.AudioManager;
 import android.media.SoundPool;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.MediaController;
+import android.widget.VideoView;
 
 public class ClassicModeActivity extends AppCompatActivity {
+    VideoView videoView;
 
 
     protected void hideBottomUIMenu() {
@@ -31,6 +35,8 @@ public class ClassicModeActivity extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_classic_mode);
+
+        play_mp4();
 
         //        白键
         Button B1 = findViewById(R.id.classic_mode_b1);
@@ -208,6 +214,18 @@ public class ClassicModeActivity extends AppCompatActivity {
 
 
 
+    }
+    private void play_mp4(){
+        videoView = (VideoView) this.findViewById(R.id.classic_mode_video);
+        String videoUrl1="android.resource://" + getPackageName() + "/" +R.raw.waterfall;
+        if ("卡农".equals(getIntent().getStringExtra("date"))){
+            videoUrl1="android.resource://" + getPackageName() + "/" +R.raw.waterfall;
+        }
+
+        Uri uri = Uri.parse( videoUrl1 );
+        videoView.setMediaController(new MediaController(this));
+        videoView.setVideoURI(uri);
+        videoView.start();
     }
 
 }
